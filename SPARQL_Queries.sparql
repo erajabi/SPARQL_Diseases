@@ -1,0 +1,62 @@
+=======================================================================================
+Query #1: What are the risk factors for “Tobacco smoking”?
+=======================================================================================
+
+PREFIX disease: <http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#>
+PREFIX SKOS: <http://www.w3.org/2004/02/skos/core#>
+
+Select DISTINCT ?riskFactor 
+WHERE {
+    {
+    ?disease disease:isRiskFactorFor/disease:isRiskFactorFor? ?riskF.
+    ?disease  SKOS:prefLabel "Tobacco smoking".
+    ?riskF  SKOS:prefLabel ?riskFactor.
+    } 
+}
+=======================================================================================
+Query #2: Can “Aphthous stomatitis” cause “Mucositis”?
+=======================================================================================
+
+PREFIX disease: <http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#>
+PREFIX SKOS: <http://www.w3.org/2004/02/skos/core#>
+ASK {
+  ?subject disease:causesOrEffectsOn/disease:causesOrEffectsOn? ?cause.
+  ?cause   SKOS:prefLabel "Mucositis". 
+   ?subject SKOS:prefLabel "Aphthous stomatitis".
+}
+
+=======================================================================================
+Query #3: What drugs may cause “Parkinsonism” and are contraindicated with “Pregnancy”?
+=======================================================================================
+
+PREFIX disease: <http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#>
+PREFIX SKOS: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?subject ?drugName
+{
+?subject disease:belongsToCategory/disease:belongsToCategory? ?drugFamily. 
+  ?subject disease:isContraindicatedWith/disease:isContraindicatedWith? ?preg.
+  ?subject disease:causesOrEffectsOn/disease:causesOrEffectsOn? ?cause.
+  ?cause SKOS:prefLabel "Parkinsonism".
+  ?subject SKOS:prefLabel ?drugName.
+  ?preg SKOS:prefLabel "Pregnancy".
+}
+
+=======================================================================================
+Query #4: What kind of “Hematological abnormality” may cause “chest pain” and “Roth spot”?
+=======================================================================================
+
+PREFIX disease: <http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#>
+PREFIX SKOS: <http://www.w3.org/2004/02/skos/core#>
+Select ?diseaseName ?disease 
+WHERE {
+  {
+  ?disease disease:causesOrEffectsOn/disease:causesOrEffectsOn? ?cause1.
+  ?disease disease:belongsToCategory/disease:belongsToCategory? ?category.
+  ?category SKOS:prefLabel "Hematological abnormality".
+  ?disease disease:causesOrEffectsOn/disease:causesOrEffectsOn? ?cause2.
+  ?disease SKOS:prefLabel ?diseaseName.
+  ?cause1 SKOS:prefLabel "Chest pain".
+  ?cause2 SKOS:prefLabel "Roth spots".
+} 
+}
