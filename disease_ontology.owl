@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#"
+     xml:base="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;altLabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#associatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#associatedWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Chemicals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Congenital_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Environmental_social_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Hyperplastic_conditions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Miscellaneous_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Orthopaedic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Symptoms_and_signs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#belongsToCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#belongsToCategory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arthropods"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Chemicals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Congenital_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Environmental_social_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Hyperplastic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Iatrogenic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Immune_mediated_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Infections"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Investigation_findings"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Miscellaneous_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Orthopaedic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Pharmacokinetics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Symptoms_and_signs"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#hasCategories"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#belongsToDrugFamily -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#belongsToDrugFamily">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Chemicals"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isDrugFamilyOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#causesOrEffectsOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#causesOrEffectsOn">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arthropods"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Chemicals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Congenital_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Environmental_social_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Hyperplastic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Iatrogenic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Immune_mediated_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Infections"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Miscellaneous_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Orthopaedic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Symptoms_and_signs"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isCausedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#contraindicates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#contraindicates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Congenital_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Environmental_social_conditions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Miscellaneous_conditions"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isContraindicatedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#hasCategories -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#hasCategories">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#hasIngredients -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#hasIngredients">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#hasRiskFactors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#hasRiskFactors">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isRiskFactorFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#interactsWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#interactsWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Chemicals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Environmental_social_conditions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isAllelicWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isAllelicWith">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Congenital_conditions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isCausedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isCausedBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isContraindicatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isContraindicatedWith">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isDrugFamilyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isDrugFamilyOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isIngredientOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isRiskFactorFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isRiskFactorFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arthropods"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Chemicals"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Congenital_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Environmental_social_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Hyperplastic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Iatrogenic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Infections"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Miscellaneous_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Orthopaedic_conditions"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Symptoms_and_signs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isVectorBornBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isVectorBornBy">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isVectorFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isVectorFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#isVectorFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arthropods"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Iatrogenic_conditions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+    <owl:ObjectProperty rdf:about="&rdfs;seeAlso">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="&skos;broader">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#itemID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#itemID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:DatatypeProperty rdf:about="&skos;altLabel">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:DatatypeProperty rdf:about="&skos;prefLabel">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arachnids -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arachnids">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arthropods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arthropods -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arthropods">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Chemicals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Chemicals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Congenital_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Congenital_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Environmental_social_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Environmental_social_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Hyperplastic_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Hyperplastic_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Iatrogenic_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Iatrogenic_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Immune_mediated_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Immune_mediated_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Infections -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Infections">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Insects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Insects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Arthropods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Investigation_findings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Investigation_findings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Miscellaneous_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Miscellaneous_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Orthopaedic_conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Orthopaedic_conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Pharmacokinetics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Pharmacokinetics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Symptoms_and_signs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Symptoms_and_signs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/erajabi/ontologies/2017/3/disease#Item"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
